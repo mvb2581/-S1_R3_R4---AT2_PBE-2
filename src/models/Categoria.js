@@ -51,7 +51,7 @@ export class Categoria{
         }
     }
 
-    // Design Patern: Factory
+   
     static criar(dados){
         return new Categoria(dados.nome,dados.descricao,null);
     }

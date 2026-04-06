@@ -1,0 +1,316 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: My first collection
+meta:
+  id: wrk_baa0e42053ce4828a08699618a525bd4
+  created: 1770047983791
+  modified: 1770047983791
+  description: ""
+collection:
+  - name: Atividade
+    meta:
+      id: fld_b78154e236294e01b7502347846f347c
+      created: 1775484558480
+      modified: 1775484587630
+      sortKey: -1775484558480
+      description: ""
+    children:
+      - name: Categoria
+        meta:
+          id: fld_0d883cfa98a742aa90cca5d4c4f346ff
+          created: 1772473408256
+          modified: 1775484606358
+          sortKey: -1775484598935
+          description: ""
+        children:
+          - url: http://localhost:8080/categorias/3
+            name: Delete
+            meta:
+              id: req_9fae69209792472b8126c1aa3d535a62
+              created: 1770053415544
+              modified: 1775483673908
+              isPrivate: false
+              description: ""
+              sortKey: -1772473422527
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias
+            name: Select
+            meta:
+              id: req_e3d64352341146faad46bd322a00d2a9
+              created: 1772473459230
+              modified: 1775483318828
+              isPrivate: false
+              description: ""
+              sortKey: -1771260703185.5
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            parameters:
+              - name: descricaoCategoria
+                value: nova categoria
+                description: ""
+                disabled: false
+              - name: id
+                value: "1"
+                description: ""
+                disabled: false
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias
+            name: Insert
+            meta:
+              id: req_70e3f1398f4e4f07b350e1c6479b68dc
+              created: 1772473469795
+              modified: 1775483308497
+              isPrivate: false
+              description: ""
+              sortKey: -1770654343514.75
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+
+                "nome":"maça",
+                "descricao":"É uma maça"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias/3
+            name: Update
+            meta:
+              id: req_3c9d3d0b5f1b43ac9cf35d83f178bfd1
+              created: 1772473489573
+              modified: 1775483662321
+              isPrivate: false
+              description: ""
+              sortKey: -1770351163679.375
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Maça bem vermelha",
+                  "descricao": "Maça vermelhinha"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Produto
+        meta:
+          id: fld_47e7fbfb34d64f79900b8184c371feb4
+          created: 1775483691667
+          modified: 1775484598865
+          sortKey: -1775484598835
+          description: ""
+        children:
+          - url: http://localhost:8080/produtos
+            name: Create
+            meta:
+              id: req_737769b0b6504d8c8b7e5db3c56a0c83
+              created: 1770047983844
+              modified: 1775484317166
+              isPrivate: false
+              description: ""
+              sortKey: -1775483696015
+            method: POST
+            body:
+              mimeType: multipart/form-data
+              params:
+                - name: idCategoria
+                  value: "2"
+                  description: ""
+                  disabled: false
+                - name: nome
+                  value: fruta
+                  description: ""
+                  disabled: false
+                - name: valor
+                  value: "5.55"
+                  description: ""
+                  disabled: false
+                - name: imagem
+                  value: ""
+                  description: ""
+                  disabled: false
+                  fileName: C:\Users\46078103806\Pictures\Screenshots\Captura de tela 2026-02-09
+                    123930.png
+                  type: file
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/produtos
+            name: Select
+            meta:
+              id: req_7ad2d9e255e74779a3bd43ba2c4d9d38
+              created: 1775484285476
+              modified: 1775484295572
+              isPrivate: false
+              description: ""
+              sortKey: -1773978559271
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/produtos/4
+            name: Update
+            meta:
+              id: req_23dfc6f359c348848b534247e2817001
+              created: 1775484327271
+              modified: 1775484441904
+              isPrivate: false
+              description: ""
+              sortKey: -1773225990899
+            method: PUT
+            body:
+              mimeType: multipart/form-data
+              params:
+                - name: idCategoria
+                  value: "2"
+                  description: ""
+                  disabled: false
+                - name: nome
+                  value: frutinha
+                  description: ""
+                  disabled: false
+                - name: valor
+                  value: "10.5"
+                  description: ""
+                  disabled: false
+                - name: imagem
+                  value: ""
+                  description: ""
+                  disabled: false
+                  fileName: C:\Users\46078103806\Pictures\Screenshots\Captura de tela 2026-02-19
+                    094859.png
+                  type: file
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/produtos/4
+            name: Delete
+            meta:
+              id: req_71f392a12c194712ad53e73b2e5a3b2c
+              created: 1775484456901
+              modified: 1775484465132
+              isPrivate: false
+              description: ""
+              sortKey: -1772849706713
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_ced920141c885f6d606a4a349c7bd3a59e7c616a
+    created: 1770047983826
+    modified: 1770047983826
+environments:
+  name: Base Environment
+  meta:
+    id: env_ced920141c885f6d606a4a349c7bd3a59e7c616a
+    created: 1770047983796
+    modified: 1770047983796
+    isPrivate: false

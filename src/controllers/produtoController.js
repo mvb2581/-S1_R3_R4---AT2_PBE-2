@@ -8,14 +8,15 @@ const produtoController = {
             console.log(req.body)
             const { idCategoria, nome, valor } = req.body;
             const caminhoImagem = req.file ? req.file.filename : null;
-       
-            if (!idCategoria || !nome || valor === undefined) {
+        
+             if (!idCategoria || !nome || valor === undefined) {
                 return res.status(400).json({
-                    message: 'Dados inválidos'
-                });
+                     message: 'Dados inválidos'
+                 });
             }
 
             const produto = Produto.criar({idCategoria,nome,valor: Number(valor),caminhoImagem });
+           
             const result = await produtoRepository.criar(produto);
             res.status(201).json({ message: 'Produto criado com sucesso', result});
 
